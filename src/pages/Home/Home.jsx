@@ -24,7 +24,7 @@ export const Home = () => {
             traePersonajes()
             .then(
                 results => {
-                    if(results.data.results.length !== 0){
+                    if(results.data.results.length !== 0 || setMsgError !== ""){
                         setPersonajes(results.data.results)
                     } else {
                         setMsgError(results.data.message)
